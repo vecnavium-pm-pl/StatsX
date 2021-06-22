@@ -32,7 +32,6 @@ class Main extends PluginBase implements Listener
 	public function onEnable(): void
 	{
 		self::$instance = $this;
-		@mkdir($this->plugin->getDataFolder() . "data/");
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getServer()->getCommandMap()->register("SimpleStats", new StatsCommand($this));
 		
