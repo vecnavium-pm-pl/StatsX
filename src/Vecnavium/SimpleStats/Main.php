@@ -25,8 +25,6 @@ class Main extends PluginBase implements Listener
 
 	/** @var Main */
 	private static $instance;
-	/** @var YamlDataProvider */
-	private $yamlProvider;
 	/** @var UserDataSessionProvider[] */
 	private $sessions = [];
 
@@ -34,8 +32,6 @@ class Main extends PluginBase implements Listener
 	public function onEnable(): void
 	{
 		self::$instance = $this;
-		$this->yamlProvider = new YamlDataProvider($this);
-		$this->leaderboardManager = new LeaderboardManager($this);
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getServer()->getCommandMap()->register("SimpleStats", new StatsCommand($this));
 	}
