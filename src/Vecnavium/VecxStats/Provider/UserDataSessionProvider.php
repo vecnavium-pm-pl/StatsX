@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
-namespace Vecnavium\SimpleStats\Provider;
+namespace Vecnavium\VecxStats\Provider;
 
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\Player;
 use pocketmine\utils\Config;
-use Vecnavium\SimpleStats\Main;
+use Vecnavium\VecxStats\Main;
 use pocketmine\utils\TextFormat as C;
 
 class UserDataSessionProvider
