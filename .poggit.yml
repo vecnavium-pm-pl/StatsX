@@ -1,9 +1,9 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Vecnavium/VecxStats
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Vecnavium/VecnaStats
 build-by-default: true
 branches:
 - main
 projects:
-  VecxStats:
+  VecnaStats:
     path: ""
     libs:
       - src: jojoe77777/FormAPI/libFormAPI
