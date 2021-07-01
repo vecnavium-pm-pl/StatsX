@@ -1,6 +1,6 @@
-name: VecxStats
+name: VecnaStats
 author: Vecnavium
-main: Vecnavium\VecxStats\Main
+main: Vecnavium\VecnaStats\Main
 version: "1.0.0"
 api: [3.0.0]
 description: A Pocketmine-MP Plugin that keeps track of Player Statistics
