@@ -10,11 +10,10 @@ use pocketmine\event\entity\EntityLevelChangeEvent;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerQuitEvent;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use Vecnavium\VecnaStats\Commands\StatsCommand;
 use Vecnavium\VecnaStats\Provider\UserDataSessionProvider;
-use Vecnavium\VecnaStats\Provider\YamlDataProvider;
 
 /**
  * Class Main
