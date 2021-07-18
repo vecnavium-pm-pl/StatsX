@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Vecnavium\SimpleStats;
+namespace Vecnavium\VecnaStats;
 
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDamageEvent;
@@ -12,9 +12,9 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
-use Vecnavium\SimpleStats\Commands\StatsCommand;
-use Vecnavium\SimpleStats\Provider\UserDataSessionProvider;
-use Vecnavium\SimpleStats\Provider\YamlDataProvider;
+use Vecnavium\VecnaStats\Commands\StatsCommand;
+use Vecnavium\VecnaStats\Provider\UserDataSessionProvider;
+use Vecnavium\VecnaStats\Provider\YamlDataProvider;
 
 /**
  * Class Main
