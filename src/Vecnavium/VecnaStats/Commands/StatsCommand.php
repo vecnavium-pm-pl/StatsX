@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Vecnavium\VecnaStats\Commands;
 
+use jojoe77777\FormAPI\CustomForm
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginIdentifiableCommand;
