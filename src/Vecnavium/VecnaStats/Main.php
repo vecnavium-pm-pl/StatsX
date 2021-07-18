@@ -32,7 +32,7 @@ class Main extends PluginBase implements Listener
 	{
 		self::$instance = $this;
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-		$this->getServer()->getCommandMap()->register("SimpleStats", new StatsCommand($this));
+		$this->getServer()->getCommandMap()->register("VecnaStats", new StatsCommand($this));
 		
 	}
 
