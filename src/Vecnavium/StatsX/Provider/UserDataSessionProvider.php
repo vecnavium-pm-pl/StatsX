@@ -5,7 +5,7 @@ namespace Vecnavium\StatsX\Provider;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\Player;
 use pocketmine\utils\Config;
-use Vecnavium\StatsX\Main;
+use Vecnavium\StatsX\StatsX;
 use pocketmine\utils\TextFormat as C;
 
 class UserDataSessionProvider
@@ -24,7 +24,7 @@ class UserDataSessionProvider
 	public function __construct(Player $player)
 	{
 		$this->player = $player;
-		$this->config = new Config(Main::getInstance()->getDataFolder() . "data/{$player->getName()}.yml");
+		$this->config = new Config(StatsX::getInstance()->getDataFolder() . "data/{$player->getName()}.yml");
 	}
 
 	/**
@@ -42,7 +42,7 @@ class UserDataSessionProvider
 		$this->config->save();
 		$this->currentStreak++;
 		if ($this->currentStreak > 5 && $this->currentStreak > $this->getStreak()) {
-			Main::getInstance()->getServer()->broadcastMessage(
+            StatsX::getInstance()->getServer()->broadcastMessage(
 				C::GRAY . "" . C::DARK_RED . "KillStreak alert:" .
 				C::GRAY . "> " . C::WHITE . $this->player->getName() . " is on a " . $this->currentStreak .
 				" killstreak. Go kill them to end their streak! ");
@@ -130,9 +130,9 @@ class UserDataSessionProvider
 	/**
 	 * @return Main
 	 */
-	public function getPlugin(): Main
+	public function getPlugin(): StatsX
 	{
-		return Main::getInstance();
+		return StatsX::getInstance();
 	}
 
 	private function levelUp(): void

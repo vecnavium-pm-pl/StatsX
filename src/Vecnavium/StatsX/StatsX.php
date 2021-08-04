@@ -20,7 +20,7 @@ use Vecnavium\StatsX\Provider\YamlDataProvider;
  * Class Main
  * @package Vecnavium\SimpleStats
  */
-class Main extends PluginBase implements Listener
+class StatsX extends PluginBase implements Listener
 {
 
 	/** @var Main */
@@ -33,7 +33,9 @@ class Main extends PluginBase implements Listener
 	{
 		self::$instance = $this;
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-		$this->getServer()->getCommandMap()->register("VecnaStats", new StatsCommand($this));
+		$this->getServer()->getCommandMap()->register("StatsX", new StatsCommand($this));
+        @mkdir($this->getDataFolder());
+        @mkdir($this->getDataFolder() . "data/");
 		
 	}
 
@@ -100,7 +102,7 @@ class Main extends PluginBase implements Listener
 	/**
 	 * @return Main
 	 */
-	public static function getInstance(): Main
+	public static function getInstance(): StatsX
 	{
 		return self::$instance;
 	}

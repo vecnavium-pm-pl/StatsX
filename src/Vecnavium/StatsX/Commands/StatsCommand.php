@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Vecnavium\StatsX\Commands;
 
-use jojoe77777\FormAPI\CustomForm;
+
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginIdentifiableCommand;
@@ -12,6 +12,7 @@ use pocketmine\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\utils\TextFormat as C;
 use Vecnavium\StatsX\StatsX;
+use Vecnavium\StatsX\Forms\CustomForm;
 
 /**
  * Class StatsCommand
@@ -26,7 +27,7 @@ class StatsCommand extends Command implements PluginIdentifiableCommand
 	 * StatsCommand constructor.
 	 * @param Main $plugin
 	 */
-	public function __construct(Main $plugin)
+	public function __construct(StatsX $plugin)
 	{
 		parent::__construct("stats", "stats command", "/stats", ['stats']);
 		$this->setDescription("Get stats on a player or yourself.");
