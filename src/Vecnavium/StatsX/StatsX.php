@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Vecnavium\VecnaStats;
+namespace Vecnavium\StatsX;
 
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDamageEvent;

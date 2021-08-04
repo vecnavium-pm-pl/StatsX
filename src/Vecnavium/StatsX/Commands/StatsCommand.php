@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Vecnavium\VecnaStats\Commands;
+namespace Vecnavium\StatsX\Commands;
 
 use jojoe77777\FormAPI\CustomForm;
 use pocketmine\command\Command;
@@ -80,7 +80,7 @@ class StatsCommand extends Command implements PluginIdentifiableCommand
 			}
 			return true;
 		});
-		$form->setTitle('§cVecna§eStats');
+		$form->setTitle('§eStatsX');
 		$form->addLabel('Enter the in-game name of the player you wish to see stats for and then press submit.');
 		$form->addInput('Username', 'Enter the username here');
 		$player->sendForm($form);
