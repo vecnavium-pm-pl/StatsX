@@ -3,7 +3,7 @@ build-by-default: true
 branches:
 - main
 projects:
-  VecnaStats:
+  StatsX:
     path: ""
     libs:
       - src: jojoe77777/FormAPI/libFormAPI
