@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Vecnavium\StatsX\Commands;
 
-
+use onebone\economyapi\EconomyAPI;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginIdentifiableCommand;
@@ -73,7 +73,7 @@ class StatsCommand extends Command implements PluginIdentifiableCommand
 				if ($player !== null) {
 					$data = $this->plugin->getSessionFor($player);
 					$name = $player->getName();
-					$sender->sendMessage(C::RED . "[" . C::YELLOW . "Player" . C::YELLOW . "Statistics" . C::RED . "] \n" . C::RED . "=============\n" . C::WHITE . "+ Player: " . $name . "\n" . C::WHITE . "+ Level: " . $data->getLevel() . "\n" . C::WHITE . "+ Kills: " . $data->getKills() . "\n" . C::WHITE . "+ Killstreak: " . $data->getStreak() . "\n" . C::WHITE . "+ Deaths: " . $data->getDeaths() . "\n" . C::RED . "=============");
+					$sender->sendMessage(C::RED . "[" . C::YELLOW . "Player" . C::YELLOW . "Statistics" . C::RED . "] \n" . C::RED . "=============\n" . C::WHITE . "+ Player: " . $name . "\n" . C::WHITE . "+ Level: " . $data->getLevel() . "\n" . C::WHITE . "+ Kills: " . $data->getKills() . "\n" . C::WHITE . "+ Killstreak: " . $data->getStreak() . "\n" . C::WHITE . "+ Deaths: " . $data->getDeaths() . "\n" . C::WHITE . "+ Money: " . EconomyAPI::getInstance()->myMoney($player) . "\n" . C::RED . "=============");
 				} else {
 					$sender->sendMessage("§cThis player either does not have any data or does not exist.");
 					return true;
@@ -81,7 +81,7 @@ class StatsCommand extends Command implements PluginIdentifiableCommand
 			}
 			return true;
 		});
-		$form->setTitle('§eStatsX');
+		$form->setTitle('§4StatsX');
 		$form->addLabel('Enter the in-game name of the player you wish to see stats for and then press submit.');
 		$form->addInput('Username', 'Enter the username here');
 		$player->sendForm($form);
