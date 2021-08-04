@@ -11,7 +11,7 @@ use pocketmine\command\PluginIdentifiableCommand;
 use pocketmine\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\utils\TextFormat as C;
-use Vecnavium\VecnaStats\Main;
+use Vecnavium\StatsX\StatsX;
 
 /**
  * Class StatsCommand
