@@ -36,9 +36,19 @@ class StatsX extends PluginBase implements Listener
 		$this->getServer()->getCommandMap()->register("StatsX", new StatsCommand($this));
         @mkdir($this->getDataFolder());
         @mkdir($this->getDataFolder() . "data/");
+        $this->checkEconomyPlugin();
 		
 	}
 
+    public function checkEconomyPlugin(){
+        if($this->getConfig()->get('EconomyAPI-Support') == 'true'){
+            if($this->getServer()->getPluginManager()->getPlugin('EconomyAPI') === null){
+                $this->getLogger()->warning('§cEconomyAPI Plugin not found. Please install EconomyAPI.');
+                $this->getLogger()->warning('§cOtherwise please disable this feature by setting EconomyAPI-Support to false for the plugin to function.');
+                $this->getServer()->getPluginManager()->disablePlugin($this);
+            }
+        }
+    }
 
 	/**
 	 * @param Player $player
