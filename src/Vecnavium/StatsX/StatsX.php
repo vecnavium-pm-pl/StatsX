@@ -50,6 +50,11 @@ class StatsX extends PluginBase implements Listener
         }
     }
 
+    public function replaceProcess(Player $player, string $string): string {
+        $string = str_replace("{line}", TF::EOL, $string);
+        return $string;
+    }
+
 	/**
 	 * @param Player $player
 	 * @return UserDataSessionProvider|null
