@@ -9,8 +9,7 @@ A Pocketmine-MP Plugin that allows you to keep track of your own and others stat
 
 # Planned features
 
-None really, yet I guess.
-If you do have a suggestion let me know in the [Support Discord](https://discord.gg/jWFB56RqUN) or Create an [Issue](https://github.com/Vecnavium/SimpleStats/issues/new) about your suggestion.
+EconomyAPI Support
 
 # Commands & Permissions 
 
