@@ -27,7 +27,7 @@ class StatsX extends PluginBase implements Listener
 	/** @var Main */
 	private static $instance;
 	/** @var UserDataSessionProvider[] */
-	private $sessions = []
+	private array $sessions = []
 
 
 	public function onEnable(): void
