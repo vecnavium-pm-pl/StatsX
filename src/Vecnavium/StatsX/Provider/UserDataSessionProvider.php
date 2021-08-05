@@ -36,18 +36,12 @@ class UserDataSessionProvider
 	}
 
 	public function addKill(): void
-	{
-		$kills = $this->getKills() + 1;
-		$this->config->set('kills', $kills);
-		$this->config->save();
-		$this->currentStreak++;
-		if ($this->currentStreak > 5 && $this->currentStreak > $this->getStreak()) {
-            StatsX::getInstance()->getServer()->broadcastMessage(
-				C::GRAY . "" . C::DARK_RED . "KillStreak alert:" .
-				C::GRAY . "> " . C::WHITE . $this->player->getName() . " is on a " . $this->currentStreak .
-				" killstreak. Go kill them to end their streak! ");
-			}
-		}
+    {
+        $kills = $this->getKills() + 1;
+        $this->config->set('kills', $kills);
+        $this->config->save();
+        $this->currentStreak++;
+    }
 
 
 	/**
