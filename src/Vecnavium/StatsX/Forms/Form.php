@@ -1,5 +1,10 @@
 <?php
 
+ // FormAPI by Jojoe77777
+ // Developer: Jojoe77777
+ // Licensed under LGPL-3.0 License
+//(https://github.com/jojoe77777/FormAPI)
+
 declare(strict_types = 1);
 
 namespace Vecnavium\StatsX\Forms;
