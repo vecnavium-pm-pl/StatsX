@@ -1,4 +1,9 @@
 # StatsX
+[![](https://poggit.pmmp.io/shield.state/StatsX)](https://poggit.pmmp.io/p/StatsX)
+[![](https://poggit.pmmp.io/shield.api/StatsX)](https://poggit.pmmp.io/p/StatsX)
+[![](https://poggit.pmmp.io/shield.dl.total/StatsX)](https://poggit.pmmp.io/p/StatsX)
+[![](https://poggit.pmmp.io/shield.dl/StatsX)](https://poggit.pmmp.io/p/StatsX)
+
 A Pocketmine-MP Plugin that allows you to keep track of your own and others statistcs
 
 # Features 
