@@ -14,7 +14,9 @@ A Pocketmine-MP Plugin that allows you to keep track of your own and others stat
 
 # Planned features
 
-EconomyAPI Support
+- [ ] Scoreboard support (Can be enabled and disabled) 
+
+- [ ] EconomyAPI Support  
 
 # Commands & Permissions 
 
