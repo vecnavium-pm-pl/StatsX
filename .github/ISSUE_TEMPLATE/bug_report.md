@@ -27,7 +27,7 @@ Steps to reproduce the behavior:
 **Expected behavior**
 A clear and concise description of what you expected to happen.
 
-**VecnaLeaderboards plugin information**
+**StatsX plugin information**
 - Plugin Version: [e.g. 1.0.0]
 
 
