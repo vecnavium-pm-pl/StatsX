@@ -6,6 +6,6 @@ projects:
   VecnaStats:
     path: ""
     libs:
-      - src: Vecnavium/FormAPI/libFormAPI
+      - src: Vecnavium/FormsUI/libFormAPI
         version: 1.4.0-alpha
 ...
