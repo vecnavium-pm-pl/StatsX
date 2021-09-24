@@ -1,4 +1,4 @@
-name: VecnaStats
+name: Stats
 author: Vecnavium
 main: Vecnavium\StatsX\Main
 version: "1.0.0"
