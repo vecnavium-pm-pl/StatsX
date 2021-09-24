@@ -1,7 +1,7 @@
 name: StatsX
 author: Vecnavium
 main: Vecnavium\StatsX\StatsX
-version: "1.0.0"
+version: "1.0.1"
 api: [3.0.0]
 description: A Pocketmine-MP Plugin that keeps track of Player Statistics
 
