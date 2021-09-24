@@ -40,11 +40,17 @@ class StatsX extends PluginBase implements Listener
 	public function onEnable(): void
 	{
 		self::$instance = $this;
+        $this->checkUpdate();
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getServer()->getCommandMap()->register("StatsX", new StatsCommand($this));
         @mkdir($this->getDataFolder());
         @mkdir($this->getDataFolder() . "data/");
 	}
+
+    public function checkUpdate(bool $isRetry = false): void {
+
+        $this->getServer()->getAsyncPool()->submitTask(new CheckUpdateTask($this, $isRetry));
+    }
 
 	/**
 	 * @param Player $player
