@@ -3,6 +3,6 @@ build-by-default: true
 branches:
 - PM4
 projects:
-  VecnaStats:
+  StatsX:
     path: ""
 ...
