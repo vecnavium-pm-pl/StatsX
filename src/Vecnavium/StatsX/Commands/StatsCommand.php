@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Vecnavium\StatsX\Commands;
 
-use jojoe77777\FormAPI\CustomForm;
+use Vecnavium\StatsX\Forms\CustomForm;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\defaults\VanillaCommand;
