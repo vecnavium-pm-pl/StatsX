@@ -24,7 +24,7 @@ class UserDataSessionProvider
 	public function __construct(Player $player)
 	{
 		$this->player = $player;
-		$this->config = new Config(Main::getInstance()->getDataFolder() . "data/{$player->getName()}.yml");
+		$this->config = new Config(Main::getInstance()->getDataFolder() . "data/{$player->getName()}.json");
 	}
 
 	/**
