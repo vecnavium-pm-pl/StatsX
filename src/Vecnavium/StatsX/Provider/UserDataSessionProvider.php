@@ -41,12 +41,6 @@ class UserDataSessionProvider
 		$this->config->set('kills', $kills);
 		$this->config->save();
 		$this->currentStreak++;
-		if ($this->currentStreak > 5 && $this->currentStreak > $this->getStreak()) {
-			Main::getInstance()->getServer()->broadcastMessage(
-				C::GRAY . "" . C::DARK_RED . "KillStreak alert:" .
-				C::GRAY . "> " . C::WHITE . $this->player->getName() . " is on a " . $this->currentStreak .
-				" killstreak. Go kill them to end their streak! ");
-			}
 		}
 
 
@@ -66,50 +60,8 @@ class UserDataSessionProvider
 		$deaths = $this->getDeaths();
 		$this->config->set('deaths', $deaths + 1);
 		$this->config->save();
-		if ($this->currentStreak > $this->getStreak()) {
-			if ($assasin !== null) {
-				$this->player->sendMessage(C::GRAY . "" . C::DARK_GREEN . "KillStreak alert:" . C::GRAY . "> " . C::WHITE . "Your " . $this->currentStreak . " killstreak was ended by " . $assasin->getName() . "!");
-				$assasin->sendMessage(C::GRAY . "" . C::DARK_RED . "KillStreak alert:" . C::GRAY . "> " . C::WHITE . "You have ended " . $this->player->getName() . "'s " . $this->currentStreak . " killstreak!");
-			} else {
-				$this->player->sendMessage(C::GRAY . "" . C::DARK_GREEN . "KillStreak alert:" . C::GRAY . "> " . C::WHITE . "Your " . $this->currentStreak . " killstreak was ended!");
-			}
-		}
-		$this->currentStreak = 0;
 	}
 
-	/**
-	 * @return int
-	 */
-	public function getStreak(): int
-	{
-		return (int)$this->config->get('killstreak', 0);
-	}
-
-	/**
-	 * @param int $streak
-	 */
-	public function setStreak(int $streak): void
-	{
-		$this->config->set('killstreak', $streak);
-		$this->config->save();
-	}
-
-	/**
-	 * @return int
-	 */
-	public function getLevel(): int
-	{
-		return (int)$this->config->get('level', 0);
-	}
-
-	/**
-	 * @param int $level
-	 */
-	public function setLevel(int $level): void
-	{
-		$this->config->set('level', $level);
-		$this->config->save();
-	}
 
 	/**
 	 * @return Player
@@ -119,13 +71,6 @@ class UserDataSessionProvider
 		return $this->player;
 	}
 
-	/**
-	 * @return int
-	 */
-	public function getCurrentStreak(): int
-	{
-		return $this->currentStreak;
-	}
 
 	/**
 	 * @return Main
@@ -133,13 +78,6 @@ class UserDataSessionProvider
 	public function getPlugin(): Main
 	{
 		return Main::getInstance();
-	}
-
-	private function levelUp(): void
-	{
-		$level = $this->getLevel() + 1;
-		$this->config->set('level', $level);
-		$this->config->save();
 	}
 
 }
