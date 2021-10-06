@@ -1,4 +1,4 @@
-# SimpleStats
+# StatsX
 A Pocketmine-MP Plugin that allows you to keep track of your own and others statistcs
 
 # Features 
@@ -24,7 +24,7 @@ You found a bug or a plugin issue?
 
 - Contact support in the [Discord Server](https://discord.gg/jWFB56RqUN)
 
-- Create an [Issue](https://github.com/Vecnavium/SimpleStats/issues/new)
+- Create an [Issue](https://github.com/Vecnavium/StatsX/issues/new)
 
 - Write your bug & the issue you are having with all informations including the error so I can track the issue
 
