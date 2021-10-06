@@ -80,7 +80,7 @@ class StatsCommand extends Command
 			}
 			return true;
 		});
-		$form->setTitle('§cVecna§eStats');
+		$form->setTitle('§cStats§eX');
 		$form->addLabel('Enter the in-game name of the player you wish to see stats for and then press submit.');
 		$form->addInput('Username', 'Enter the username here');
 		$player->sendForm($form);
