@@ -12,11 +12,9 @@ A Pocketmine-MP Plugin that allows you to keep track of your own and others stat
 - Ability to get statistics on other players
 
 
-# Planned features
+We will not take any suggestions for StatsX API 3.0.0 for the reason below.
 
-- [ ] Scoreboard support (Can be enabled and disabled) 
-
-- [ ] EconomyAPI Support  
+StatsX on PocketMine API 3.0.0 is now on feature freeze and will only be doing plugin updates when it comes to bug fixes.
 
 # Commands & Permissions 
 
@@ -35,10 +33,4 @@ You found a bug or a plugin issue?
 - Write your bug & the issue you are having with all informations including the error so I can track the issue
 
 - Submit the issue and be patient for a response for a solution to your problem
-
-# Suggestions
-
-Have a suggestion?
-
-Feel free to contact me in the [Support Discord Server](https://discord.gg/jWFB56RqUN) and suggest the suggestion you have in mind for this plugin!
 
