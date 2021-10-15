@@ -11,6 +11,7 @@ A Pocketmine-MP Plugin that allows you to keep track of your own and others stat
 
 - Ability to get statistics on other players
 
+Planned features
 
 We will not take any suggestions for StatsX API 3.0.0 for the reason below.
 
