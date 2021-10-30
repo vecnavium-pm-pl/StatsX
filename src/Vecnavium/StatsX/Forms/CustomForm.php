@@ -4,9 +4,12 @@ declare(strict_types = 1);
 
 namespace Vecnavium\StatsX\Forms;
 
+use pocketmine\form\FormValidationException;
+
 class CustomForm extends Form {
 
     private $labelMap = [];
+    private $validationMethods = [];
 
     /**
      * @param callable|null $callable
@@ -19,7 +22,18 @@ class CustomForm extends Form {
     }
 
     public function processData(&$data) : void {
+        if($data !== null && !is_array($data)) {
+            throw new FormValidationException("Expected an array response, got " . gettype($data));
+        }
         if(is_array($data)) {
+            foreach($data as $i => $v){
+                $validationMethod = $this->validationMethods[$i] ?? "";
+                if($validationMethod === "") {
+                    throw new FormValidationException("Invalid element " . $i);
+                }
+                if(!call_user_func($validationMethod, $v)) {
+                    throw new FormValidationException("Invalid type given for element " . $this->labelMap[$i]);
+                }
             $new = [];
             foreach ($data as $i => $v) {
                 $new[$this->labelMap[$i]] = $v;
