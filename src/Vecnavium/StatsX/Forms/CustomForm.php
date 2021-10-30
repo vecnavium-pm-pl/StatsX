@@ -26,6 +26,10 @@ class CustomForm extends Form {
             throw new FormValidationException("Expected an array response, got " . gettype($data));
         }
         if(is_array($data)) {
+            if(count($data) !== count($this->validationMethods)) {
+                throw new FormValidationException("Expected an array response with the size " . count($this->validationMethods) . ", got " . count($data));
+            }
+            $new = [];
             foreach($data as $i => $v){
                 $validationMethod = $this->validationMethods[$i] ?? "";
                 if($validationMethod === "") {
@@ -34,8 +38,6 @@ class CustomForm extends Form {
                 if(!call_user_func($validationMethod, $v)) {
                     throw new FormValidationException("Invalid type given for element " . $this->labelMap[$i]);
                 }
-            $new = [];
-            foreach ($data as $i => $v) {
                 $new[$this->labelMap[$i]] = $v;
             }
             $data = $new;
