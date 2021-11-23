@@ -1,13 +1,16 @@
-# StatsX
-[![](https://poggit.pmmp.io/shield.state/StatsX)](https://poggit.pmmp.io/p/StatsX)
-[![](https://poggit.pmmp.io/shield.api/StatsX)](https://poggit.pmmp.io/p/StatsX)
-[![](https://poggit.pmmp.io/shield.dl.total/StatsX)](https://poggit.pmmp.io/p/StatsX)
-[![](https://poggit.pmmp.io/shield.dl/StatsX)](https://poggit.pmmp.io/p/StatsX)
+<p align="center">
+    <a href="https://github.com/Vecnavium/StatsX"><img src="https://github.com/Vecnavium/StatsX/blob/master/icon.png"></img></a><br>
+    <b>This plugin is an advanced Leaderboards plugin, with tons of supported feature, simple fast and easy!</b>
+</p>
 
-A Pocketmine-MP Plugin that allows you to keep track of your own and others statistcs
+<p align="center">
+    <img alt="GitHubrelease" src="https://img.shields.io/github/v/release/Vecnavium/StatsX?label=release&sort=semver">
+      <img alt="Stars" src= "https://img.shields.io/github/stars/Vecnavium/StatsX?style=for-the-badge">
+    <img href="https://discord.gg/6M9tGyWPjr"><img src="https://img.shields.io/discord/837701868649709568?label=discord&color=7289DA&logo=discord" alt="Discord" /></a>
+</p>
+
 
 # Features 
-
 
 - Ability to get statistics on other players
 
