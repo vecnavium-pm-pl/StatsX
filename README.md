@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/Vecnavium/StatsX"><img src="https://github.com/Vecnavium/StatsX/blob/master/icon.png"></img></a><br>
-    <b>A Pocketmine-MP Plugin that allows you to keep track of your own and others statistcs</b>
+    <b>A Pocketmine-MP Plugin that allows you to keep track of your own and others statistcs </b>
 </p>
 
 <p align="center">
